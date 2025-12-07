@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
     <script type="module" src="/src/style.css"></script>
+    <script type="module" src="/src/main.js"></script>
 </head>
 
 <body class="bg-primary text-gray-300 font-sans antialiased">
@@ -27,10 +28,18 @@
             <a href="/" class="text-3xl font-serif font-bold text-white tracking-wide">Royverse<span
                     class="text-accent">.</span></a>
             <div class="hidden md:flex space-x-8">
-                <a href="/" class="text-gray-400 hover:text-accent transition-colors">Home</a>
-                <a href="/about.html" class="text-accent transition-colors">About</a>
-                <a href="/contact.html" class="text-gray-400 hover:text-accent transition-colors">Contact</a>
+                <a href="/" class="text-gray-400 hover:text-accent transition-colors" data-i18n="nav.home">Home</a>
+                <a href="/blog.html" class="text-accent transition-colors" data-i18n="nav.blog">Blog</a>
+                <a href="/about.html" class="text-accent transition-colors" data-i18n="nav.about">About</a>
+                <a href="/contact.html" class="text-gray-400 hover:text-accent transition-colors"
+                    data-i18n="nav.contact">Contact</a>
             </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
         </div>
     </nav>
 
