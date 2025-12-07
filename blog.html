@@ -27,13 +27,19 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-3xl font-serif font-bold text-white tracking-wide">Royverse<span
                     class="text-accent">.</span></a>
-            <div class="hidden md:flex space-x-8">
-                <a href="/" class="text-gray-400 hover:text-accent transition-colors" data-i18n="nav.home">Home</a>
-                <a href="/blog.html" class="text-accent transition-colors" data-i18n="nav.blog">Blog</a>
-                <a href="/about.html" class="text-gray-400 hover:text-accent transition-colors"
-                    data-i18n="nav.about">About</a>
-                <a href="/contact.html" class="text-gray-400 hover:text-accent transition-colors"
-                    data-i18n="nav.contact">Contact</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="text-gray-400 hover:text-accent transition-colors">Home</a>
+                <a href="/blog.html" class="text-accent transition-colors">Blog</a>
+                <a href="/about.html" class="text-gray-400 hover:text-accent transition-colors">About</a>
+                <a href="/contact.html" class="text-gray-400 hover:text-accent transition-colors">Contact</a>
+
+                <div class="h-6 w-px bg-white/20"></div>
+                <div id="google_translate_element"></div>
+                <div class="flex items-center space-x-2">
+                    <button id="header-font-dec" class="text-gray-400 hover:text-white font-bold">-</button>
+                    <button id="header-font-inc" class="text-gray-400 hover:text-white font-bold">+</button>
+                    <button id="header-font-toggle" class="text-gray-400 hover:text-white text-xs uppercase">Aa</button>
+                </div>
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,23 +64,23 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Article 1 -->
+            <!-- Article 1: AI News -->
             <article
                 class="glass rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300">
                 <div class="h-48 overflow-hidden">
-                    <!-- Placeholder for dynamic image using the one we generated -->
-                    <img src="/images/gadget_blog_thumb_1765123717203.png" alt="Gadgets"
+                    <img src="/images/ai_news_thumb_1765124770970.png" alt="AI News"
                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-8">
-                    <span class="text-accent text-xs font-bold tracking-widest uppercase mb-2 block">Tech</span>
+                    <span class="text-accent text-xs font-bold tracking-widest uppercase mb-2 block">Technology</span>
                     <h2 class="text-2xl font-serif font-bold text-white mb-3 group-hover:text-accent transition-colors">
-                        <a href="/blog/post1.html">5 Must-Have Gadgets Under ₹1000</a>
+                        <a href="/blog/ai-news.html">The Latest Breakthroughs in AI</a>
                     </h2>
                     <p class="text-gray-400 mb-6 line-clamp-3">
-                        Discover the best affordable tech that delivers premium value.
+                        Discover the most recent advancements in Artificial Intelligence and how they are shaping our
+                        future.
                     </p>
-                    <a href="/blog/post1.html"
+                    <a href="/blog/ai-news.html"
                         class="inline-flex items-center text-white font-semibold hover:text-accent transition-colors">
                         Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -84,22 +90,22 @@
                 </div>
             </article>
 
-            <!-- Article 2 -->
+            <!-- Article 2: Education -->
             <article
                 class="glass rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300">
                 <div class="h-48 overflow-hidden">
-                    <img src="/images/book_blog_thumb_1765123736462.png" alt="Books"
+                    <img src="/images/education_viral_thumb_1765124790968.png" alt="Future Education"
                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-8">
-                    <span class="text-accent text-xs font-bold tracking-widest uppercase mb-2 block">Lifestyle</span>
+                    <span class="text-accent text-xs font-bold tracking-widest uppercase mb-2 block">Education</span>
                     <h2 class="text-2xl font-serif font-bold text-white mb-3 group-hover:text-accent transition-colors">
-                        <a href="/blog/post2.html">Top 3 Books That Will Change Your Life</a>
+                        <a href="/blog/education-viral.html">The Future of Learning: Viral Trends</a>
                     </h2>
                     <p class="text-gray-400 mb-6 line-clamp-3">
-                        Timeless wisdom and practical advice from the world's best authors.
+                        Explore the viral trends transforming education, from gamification to personalized AI tutors.
                     </p>
-                    <a href="/blog/post2.html"
+                    <a href="/blog/education-viral.html"
                         class="inline-flex items-center text-white font-semibold hover:text-accent transition-colors">
                         Read Article <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

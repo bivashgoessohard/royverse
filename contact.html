@@ -26,12 +26,19 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-3xl font-serif font-bold text-white tracking-wide">Royverse<span
                     class="text-accent">.</span></a>
-            <div class="hidden md:flex space-x-8">
-                <a href="/" class="text-gray-400 hover:text-accent transition-colors" data-i18n="nav.home">Home</a>
-                <a href="/blog.html" class="text-accent transition-colors" data-i18n="nav.blog">Blog</a>
-                <a href="/about.html" class="text-gray-400 hover:text-accent transition-colors"
-                    data-i18n="nav.about">About</a>
-                <a href="/contact.html" class="text-accent transition-colors" data-i18n="nav.contact">Contact</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="text-gray-400 hover:text-accent transition-colors">Home</a>
+                <a href="/blog.html" class="text-gray-400 hover:text-accent transition-colors">Blog</a>
+                <a href="/about.html" class="text-gray-400 hover:text-accent transition-colors">About</a>
+                <a href="/contact.html" class="text-accent transition-colors">Contact</a>
+
+                <div class="h-6 w-px bg-white/20"></div>
+                <div id="google_translate_element"></div>
+                <div class="flex items-center space-x-2">
+                    <button id="header-font-dec" class="text-gray-400 hover:text-white font-bold">-</button>
+                    <button id="header-font-inc" class="text-gray-400 hover:text-white font-bold">+</button>
+                    <button id="header-font-toggle" class="text-gray-400 hover:text-white text-xs uppercase">Aa</button>
+                </div>
             </div>
             <button class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
