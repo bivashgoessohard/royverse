@@ -169,8 +169,15 @@ function initParticles() {
 
 // --- Google Translate ---
 function initGoogleTranslate() {
+    // Prevent duplicate injection if script exists
+    if (document.getElementById('google-translate-script')) return;
+
     // Define the global callback function
     window.googleTranslateElementInit = function () {
+        // Double check if widget is already populated
+        const target = document.getElementById('google_translate_element');
+        if (target && target.childElementCount > 0) return;
+
         new google.translate.TranslateElement({
             pageLanguage: 'en',
             includedLanguages: 'en,hi,bn,as,ta,te,mr,gu,kn,ml,pa,ur', // Indian languages + English
@@ -181,6 +188,7 @@ function initGoogleTranslate() {
 
     // Inject the script
     const script = document.createElement('script');
+    script.id = 'google-translate-script'; // Assign ID for check
     script.type = 'text/javascript';
     script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.body.appendChild(script);
