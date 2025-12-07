@@ -1,8 +1,16 @@
 
 // --- Theme Handling ---
 function initTheme() {
-    // Check local storage or system preference
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // Check local storage. Default to LIGHT if nothing is saved.
+    const savedTheme = localStorage.theme;
+
+    // If explicitly dark, or no save but system is dark -> Dark Mode
+    // MODIFIED: We want "News Theme" (Light) to be the default even if system is dark, 
+    // UNLESS the user explicitly toggled it before. 
+    // Actually, let's respect system pref ONLY if they haven't visited, otherwise Light default.
+    // Simplifying: Default Light unless saved as Dark.
+
+    if (savedTheme === 'dark') {
         document.documentElement.classList.add('dark');
     } else {
         document.documentElement.classList.remove('dark');
