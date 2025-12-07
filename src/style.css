@@ -2,46 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer base {
+    :root {
+        /* Light Mode Default */
+        --bg-primary: #f3f4f6;
+        /* gray-100 */
+        --text-primary: #1f2937;
+        /* gray-800 */
+        --accent: #d946ef;
+        /* fuchsia-500 */
+    }
+
+    .dark {
+        /* Dark Mode (Midnight Blue) */
+        --bg-primary: #0f172a;
+        /* slate-900 */
+        --text-primary: #e2e8f0;
+        /* slate-200 */
+        --accent: #e879f9;
+        /* fuchsia-400 */
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased transition-colors duration-300;
+    }
+}
+
+@layer components {
     .glass {
-        @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+        @apply bg-white/5 backdrop-blur-lg border border-white/5;
+    }
+
+    .dark .glass {
+        @apply bg-white/5 border-white/5;
+    }
+
+    /* Lighter glass for light mode */
+    :not(.dark) .glass {
+        @apply bg-black/5 border-black/5;
     }
 
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-hover;
-    }
-
-    .card-hover {
-        @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--accent)] to-purple-500;
     }
 
     .ad-placeholder {
-        @apply bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-500 text-xs font-mono uppercase tracking-widest my-8 mx-auto;
+        @apply bg-gray-200 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg flex items-center justify-center text-gray-500 text-xs font-mono uppercase tracking-widest my-8 mx-auto;
     }
 
     #particles-canvas {
-        @apply fixed inset-0 w-full h-full z-[-1] pointer-events-auto;
+        @apply fixed inset-0 w-full h-full z-[-1] pointer-events-auto opacity-0 dark:opacity-100 transition-opacity duration-500;
     }
 
-    /* Google Translate Customization */
+    /* Google Translate Customization - Transparent & Clean */
     .goog-te-gadget-simple {
-        @apply bg-transparent !important;
+        background-color: transparent !important;
         border: none !important;
         font-size: 14px !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
+    /* Text Color Adapter */
     .goog-te-gadget-simple .goog-te-menu-value {
-        color: #e5e7eb !important;
-        /* text-gray-200 */
+        color: var(--text-primary) !important;
     }
 
     .goog-te-gadget-simple .goog-te-menu-value span {
+        color: var(--text-primary) !important;
         border-left: none !important;
-        color: #e5e7eb !important;
     }
 
     .goog-te-gadget-icon {
         display: none !important;
+    }
+
+    /* Hide standard google footer/tooltip junk */
+    .goog-te-banner-frame {
+        display: none !important;
+    }
+
+    body {
+        top: 0 !important;
     }
 }
 

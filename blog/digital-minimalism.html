@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Latest Breakthroughs in AI - Royverse</title>
+    <title>Digital Minimalism in a Hyper-Connected World - Royverse</title>
     <meta name="description"
-        content="Discover the most recent advancements in Artificial Intelligence and how they are shaping our future.">
+        content="Reclaiming your attention in the attention economy. A guide to living deliberately with technology.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,34 +16,35 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body class="bg-primary text-gray-300 font-sans antialiased">
+<body class="bg-primary text-gray-300 font-sans antialiased transition-colors duration-300">
 
-    <!-- Background (Placeholder for particles later) -->
-    <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[128px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/10 rounded-full blur-[128px]"></div>
+    <!-- Background -->
+    <div id="particles-canvas"
+        class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden opacity-100 transition-opacity duration-500">
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-primary/70 border-b border-white/5">
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-transparent border-b border-white/5"
+        id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-3xl font-serif font-bold text-white tracking-wide">Royverse<span
                     class="text-accent">.</span></a>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="/" class="text-gray-400 hover:text-accent transition-colors">Home</a>
+                <a href="/" class="text-white hover:text-accent transition-colors">Home</a>
                 <a href="/blog.html" class="text-accent transition-colors">Blog</a>
                 <a href="/about.html" class="text-gray-400 hover:text-accent transition-colors">About</a>
                 <a href="/contact.html" class="text-gray-400 hover:text-accent transition-colors">Contact</a>
 
                 <div class="h-6 w-px bg-white/20"></div>
                 <div id="google_translate_element"></div>
+                <button id="theme-toggle" class="text-gray-400 hover:text-white transition-colors"
+                    title="Toggle Theme"></button>
                 <div class="flex items-center space-x-2">
                     <button id="header-font-dec" class="text-gray-400 hover:text-white font-bold">-</button>
                     <button id="header-font-inc" class="text-gray-400 hover:text-white font-bold">+</button>
                     <button id="header-font-toggle" class="text-gray-400 hover:text-white text-xs uppercase">Aa</button>
                 </div>
             </div>
-            <button class="md:hidden text-white focus:outline-none">
+            <button class="md:hidden text-white focus:outline-none mobile-menu-btn">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
@@ -55,47 +56,51 @@
     <main class="pt-32 pb-20 container mx-auto px-6">
         <article class="max-w-3xl mx-auto">
             <header class="mb-12 text-center animate-fade-in">
-                <span class="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">Technology</span>
-                <h1 class="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">The Latest
-                    Breakthroughs in AI: What You Need to Know</h1>
+                <span class="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">Lifestyle</span>
+                <h1 class="font-serif text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">Digital Minimalism
+                    in a Hyper-Connected World</h1>
                 <div class="flex items-center justify-center space-x-4 text-sm text-gray-500">
                     <span>December 7, 2025</span>
                     <span>&bull;</span>
-                    <span>5 Min Read</span>
+                    <span>7 Min Read</span>
                 </div>
             </header>
 
             <div class="rounded-2xl overflow-hidden mb-12 shadow-2xl shadow-accent/10 animate-slide-up">
-                <img src="/images/ai_news_thumb_1765124770970.png" alt="AI Technology"
+                <img src="/images/digital_minimalism_thumb_1765126920613.png" alt="Digital Minimalism"
                     class="w-full h-auto object-cover">
             </div>
 
             <div
                 class="prose prose-invert prose-lg max-w-none prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
-                <p>Artificial Intelligence is advancing at an unprecedented pace. From generative models creating
-                    hyper-realistic art to AI agents autonomously solving complex software problems, the landscape is
-                    shifting daily. Here's a look at the most recent viral developments.</p>
+                <p class="lead text-xl text-gray-200">We are drowning in noise. Notifications, feeds, urgent emails, and
+                    the constant hum of connectivity have fragmented our attention spans to the point of exhaustion. It
+                    is time for a reset.</p>
 
-                <!-- Ad Slot: In-Article -->
+                <p>Digital Minimalism is not about throwing away your phone. It is a philosophy of technology use in
+                    which you focus your online time on a small number of carefully selected optimizing activities that
+                    strongly support things you value, and then happily miss out on everything else.</p>
+
+                <!-- Ad Slot -->
                 <div class="ad-placeholder w-full max-w-[300px] h-[250px] md:float-right md:ml-6">
                     Advertisement
                 </div>
 
-                <h2 class="font-serif text-white">1. Generative Video is Here</h2>
-                <p>The latest models from top research labs can now generate high-definition video from simple text
-                    prompts. This isn't just about entertainment; it's revolutionizing education, simulation training,
-                    and creative storytelling.</p>
+                <h2 class="font-serif text-white">The Slot Machine in Your Pocket</h2>
+                <p>Apps are designed to be addictive. They use variable reward schedules—like a slot machine—to keep you
+                    checking. Every time you pull-to-refresh, you are pulling the lever.</p>
 
-                <h2 class="font-serif text-white">2. AI in Healthcare</h2>
-                <p>New algorithms are detecting diseases earlier than ever before. Recent studies show AI outperforming
-                    human radiologists in identifying specific types of cancer, promising a future where healthcare is
-                    more proactive and personalized.</p>
+                <h2 class="font-serif text-white">Solitude Deprivation</h2>
+                <p>When was the last time you were truly alone with your thoughts? No music, no podcast, no text chain.
+                    True solitude is where we process emotions and form complex ideas. Without it, we become shallow
+                    versions of ourselves.</p>
 
-                <h2 class="font-serif text-white">3. Ethical Considerations</h2>
-                <p>With great power comes great responsibility. The global conversation is shifting towards AI safety,
-                    alignment, and ensuring these powerful tools benefit humanity as a whole.</p>
-
-                <p>Stay tuned to Royverse for more deep dives into the technological singularlity.</p>
+                <h2 class="font-serif text-white">Reclaiming Control</h2>
+                <ol>
+                    <li><strong>Delete the feeds:</strong> Remove infinite scroll apps from your phone.</li>
+                    <li><strong>Schedule connection:</strong> Check email and messages in batches.</li>
+                    <li><strong>Embrace boredom:</strong> Let your mind wander. That's where the magic happens.</li>
+                </ol>
             </div>
         </article>
     </main>
