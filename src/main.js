@@ -270,3 +270,25 @@ function initMobileMenu() {
         }
     }
 }
+
+// --- AdSense Integration ---
+function initAds() {
+    // Prevent duplicate injection
+    if (document.getElementById('adsense-script')) return;
+
+    const script = document.createElement('script');
+    script.id = 'adsense-script';
+    script.async = true;
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6887038408474117";
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    initParticles();
+    initGoogleTranslate();
+    initHeaderSettings();
+    initMobileMenu();
+    initAds();
+});
