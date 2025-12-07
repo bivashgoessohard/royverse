@@ -2,22 +2,17 @@
 // --- Theme Handling ---
 function initTheme() {
     // Check local storage. Default to LIGHT if nothing is saved.
+    // User requested "change to light theme", so we should ensure it defaults to light.
     const savedTheme = localStorage.theme;
-
-    // If explicitly dark, or no save but system is dark -> Dark Mode
-    // MODIFIED: We want "News Theme" (Light) to be the default even if system is dark, 
-    // UNLESS the user explicitly toggled it before. 
-    // Actually, let's respect system pref ONLY if they haven't visited, otherwise Light default.
-    // Simplifying: Default Light unless saved as Dark.
 
     if (savedTheme === 'dark') {
         document.documentElement.classList.add('dark');
     } else {
         document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light'; // Ensure consistency
     }
 
     // Toggle button logic
-    // We attach this via event delegation or direct if we query all potential buttons
     document.addEventListener('click', (e) => {
         const toggleBtn = e.target.closest('#theme-toggle');
         if (toggleBtn) {
@@ -55,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initGoogleTranslate();
     initHeaderSettings();
     initMobileMenu();
+    initAds();
 });
 
 // --- Particles System ---
@@ -204,9 +200,6 @@ function initGoogleTranslate() {
 
 // --- Header Settings (Font size/style) ---
 function initHeaderSettings() {
-    // These buttons will need to be added to the HTML header
-    // We attach event listeners assuming the IDs exist or will exist
-
     // Font Size
     let currentScale = 100;
     const html = document.documentElement;
@@ -299,12 +292,3 @@ function initAds() {
     script.crossOrigin = "anonymous";
     document.head.appendChild(script);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
-    initParticles();
-    initGoogleTranslate();
-    initHeaderSettings();
-    initMobileMenu();
-    initAds();
-});
