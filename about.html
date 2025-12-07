@@ -1,46 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Royverse - Your Guide to Smart Shopping</title>
-    <meta name="description" content="Learn more about Royverse, your trusted source for smart shopping tips, in-depth product reviews, and engaging lifestyle content.">
-    <meta name="keywords" content="about royverse, shopping tips, product reviews, lifestyle content">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>About Royverse - Premium Insights</title>
+    <meta name="description"
+        content="Learn more about Royverse, your trusted source for smart shopping tips, in-depth product reviews, and engaging lifestyle content.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/style.css"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-white shadow-md">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-gray-800">Royverse</a>
-            <div>
-                <a href="/" class="mx-2 text-gray-600 hover:text-gray-800">Home</a>
-                <a href="about.html" class="mx-2 text-gray-600 hover:text-gray-800">About</a>
-                <a href="contact.html" class="mx-2 text-gray-600 hover:text-gray-800">Contact</a>
-                <a href="privacy.html" class="mx-2 text-gray-600 hover:text-gray-800">Privacy Policy</a>
-            </div>
-        </nav>
-    </header>
 
-    <main class="container mx-auto px-6 py-8">
-        <section class="bg-white rounded-lg shadow-md p-8">
-            <h1 class="text-4xl font-bold mb-4">About Royverse</h1>
-            <p class="text-lg mb-4">
-                Welcome to Royverse, your ultimate destination for smart shopping and insightful product reviews. Our mission is to empower consumers with the knowledge they need to make informed purchasing decisions.
-            </p>
-            <p class="text-lg mb-4">
-                At Royverse, we believe that shopping should be a seamless and enjoyable experience. That's why we're dedicated to providing you with comprehensive guides, unbiased reviews, and the latest trends in the world of gadgets, books, and lifestyle products.
-            </p>
-            <p class="text-lg">
-                Our team of experts is passionate about finding the best products on the market and sharing their findings with you. Whether you're looking for the perfect gift, upgrading your tech, or simply seeking inspiration, Royverse is here to help.
-            </p>
+<body class="bg-primary text-gray-300 font-sans antialiased">
+
+    <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[128px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/10 rounded-full blur-[128px]"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-primary/70 border-b border-white/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-3xl font-serif font-bold text-white tracking-wide">Royverse<span
+                    class="text-accent">.</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-400 hover:text-accent transition-colors">Home</a>
+                <a href="/about.html" class="text-accent transition-colors">About</a>
+                <a href="/contact.html" class="text-gray-400 hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-32">
+        <section class="max-w-4xl mx-auto text-center mb-16">
+            <h1 class="font-serif text-4xl lg:text-6xl font-bold text-white mb-6">About <span
+                    class="text-accent">Royverse</span></h1>
+            <p class="text-xl text-gray-400">Empowering your lifestyle with curated intelligence.</p>
+        </section>
+
+        <section class="glass p-10 lg:p-14 rounded-3xl animate-slide-up max-w-4xl mx-auto">
+            <div class="prose prose-invert prose-lg max-w-none">
+                <p>
+                    Welcome to <strong>Royverse</strong>, your ultimate destination for smart shopping and insightful
+                    product reviews. Our mission is to empower consumers with the knowledge they need to make informed
+                    purchasing decisions in an increasingly complex market.
+                </p>
+                <h3 class="font-serif text-2xl text-white mt-8 mb-4">Our Philosophy</h3>
+                <p>
+                    At Royverse, we believe that shopping should be a seamless and enjoyable experience. That's why
+                    we're dedicated to providing you with comprehensive guides, unbiased reviews, and the latest trends
+                    in the world of gadgets, books, and lifestyle products. We don't just list products; we curate
+                    experiences.
+                </p>
+                <h3 class="font-serif text-2xl text-white mt-8 mb-4">The Team</h3>
+                <p>
+                    Our team of experts is passionate about finding the best products on the market. Whether you're
+                    looking for the perfect gift, upgrading your tech, or simply seeking inspiration, Royverse is here
+                    to help you navigate the noise.
+                </p>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white mt-12 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-600">
-            &copy; 2025 Royverse. All Rights Reserved.
+    <footer class="border-t border-white/5 bg-primary/50 backdrop-blur-sm mt-12">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-serif font-bold text-white">Royverse<span
+                            class="text-accent">.</span></span>
+                    <p class="text-gray-500 text-sm mt-2">© 2025 Royverse. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="/privacy.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Privacy
+                        Policy</a>
+                    <a href="/contact.html"
+                        class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>

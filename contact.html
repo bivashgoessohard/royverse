@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Royverse - Your Guide to Smart Shopping</title>
-    <meta name="description" content="Get in touch with Royverse. We welcome your questions, feedback, and collaboration inquiries.">
-    <meta name="keywords" content="contact royverse, feedback, collaboration, royverse contact">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Contact Royverse - Get in Touch</title>
+    <meta name="description" content="Contact Royverse for inquiries, collaborations, or feedback.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/style.css"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-white shadow-md">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-gray-800">Royverse</a>
-            <div>
-                <a href="/" class="mx-2 text-gray-600 hover:text-gray-800">Home</a>
-                <a href="about.html" class="mx-2 text-gray-600 hover:text-gray-800">About</a>
-                <a href="contact.html" class="mx-2 text-gray-600 hover:text-gray-800">Contact</a>
-                <a href="privacy.html" class="mx-2 text-gray-600 hover:text-gray-800">Privacy Policy</a>
-            </div>
-        </nav>
-    </header>
 
-    <main class="container mx-auto px-6 py-8">
-        <section class="bg-white rounded-lg shadow-md p-8">
-            <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-            <p class="text-lg mb-6">
-                Have a question, suggestion, or just want to say hello? We'd love to hear from you.
-            </p>
-            <div class="text-center">
-                <p class="text-lg">
-                    For any inquiries, please email us at:
-                    <a href="mailto:contact@royverse.in" class="text-blue-500 hover:underline">contact@royverse.in</a>
-                </p>
+<body class="bg-primary text-gray-300 font-sans antialiased">
+
+    <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[128px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/10 rounded-full blur-[128px]"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-primary/70 border-b border-white/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-3xl font-serif font-bold text-white tracking-wide">Royverse<span
+                    class="text-accent">.</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-gray-400 hover:text-accent transition-colors">Home</a>
+                <a href="/about.html" class="text-gray-400 hover:text-accent transition-colors">About</a>
+                <a href="/contact.html" class="text-accent transition-colors">Contact</a>
             </div>
-        </section>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-32 flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-2xl">
+            <section class="glass p-10 lg:p-14 rounded-3xl animate-slide-up text-center">
+                <h1 class="font-serif text-4xl lg:text-5xl font-bold text-white mb-6">Contact Us</h1>
+                <p class="text-lg text-gray-400 mb-10">
+                    Have a question, suggestion, or just want to say hello? We'd love to hear from you.
+                </p>
+
+                <div class="inline-block p-1 rounded-full bg-gradient-to-r from-accent to-purple-500">
+                    <a href="mailto:contact@royverse.in"
+                        class="block px-8 py-4 bg-primary/90 rounded-full text-white font-bold text-xl hover:bg-primary transition-colors">
+                        contact@royverse.in
+                    </a>
+                </div>
+
+                <p class="mt-8 text-sm text-gray-500">
+                    We typically respond within 24-48 hours.
+                </p>
+            </section>
+        </div>
     </main>
 
-    <footer class="bg-white mt-12 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-600">
-            &copy; 2025 Royverse. All Rights Reserved.
+    <footer class="border-t border-white/5 bg-primary/50 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-serif font-bold text-white">Royverse<span
+                            class="text-accent">.</span></span>
+                    <p class="text-gray-500 text-sm mt-2">© 2025 Royverse. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="/privacy.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Privacy
+                        Policy</a>
+                    <a href="/contact.html"
+                        class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
